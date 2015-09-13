@@ -2,7 +2,7 @@
 *     File Name           :     Solution02.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-13 10:36]
-*     Last Modified       :     [2015-09-13 11:00]
+*     Last Modified       :     [2015-09-13 17:06]
 *     Description         :     Return Kth to Last 
 **********************************************************************************/
 
@@ -27,7 +27,7 @@ public class Solution02
             if (p2 == null)
                 return null;
         }
-        // iterate the list untile p2 reaches end, then p1 is the required
+        // iterate the list until p2 reaches end, then p1 is the required
         // element
         while (p2.next != null) {
             p2 = p2.next;

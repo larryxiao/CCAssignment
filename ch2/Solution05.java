@@ -2,7 +2,7 @@
 *     File Name           :     Solution05.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-13 11:34]
-*     Last Modified       :     [2015-09-13 12:03]
+*     Last Modified       :     [2015-09-13 17:07]
 *     Description         :     Sum Lists 
 **********************************************************************************/
 
@@ -78,5 +78,6 @@ public class Solution05
         return ret.next;
     }
     
-    // special case: the list is very long
+    // test cases
+    // the list is very long
 }

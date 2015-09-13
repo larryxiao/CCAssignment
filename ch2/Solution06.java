@@ -2,7 +2,7 @@
 *     File Name           :     Solution06.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-13 15:09]
-*     Last Modified       :     [2015-09-13 15:22]
+*     Last Modified       :     [2015-09-13 16:59]
 *     Description         :     Palindrome 
 **********************************************************************************/
 
@@ -16,22 +16,32 @@ public class Solution06
     }
 
     //implement a function to check if a linked list is a palindrome
-    public boolean palindrome(Node list) {
+    public boolean palindrome(Node head) {
+        if (head == null)
+            return false;
         // construct a stack of the nodes 
         Stack<Node> nodes = new Stack<Node>();
-        Node ptr = list;
+        Node ptr = head;
         while(ptr != null) {
             nodes.push(ptr);
             ptr = ptr.next;
         }
+
         // check if they are the same
-        ptr = list;
-        for (int i = 0; i < nodes.size()/2; i++) {
+        ptr = head;
+        int length = nodes.size();
+        for (int i = 0; i < length/2; i++) {
             Node tmp = nodes.pop();
             if (tmp.data != ptr.data) 
                 return false;
+            ptr = ptr.next;
         }
         return true;
     }
+
+    // test cases
+    // [1]
+    // [1, 2, 1]
+    // [1, 1, 2, 1]
 }
 

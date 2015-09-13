@@ -2,7 +2,7 @@
 *     File Name           :     Solution04.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-13 10:55]
-*     Last Modified       :     [2015-09-13 11:34]
+*     Last Modified       :     [2015-09-13 15:54]
 *     Description         :     Partition 
 **********************************************************************************/
 
@@ -38,9 +38,9 @@ public class Solution04
         // to right
         while(n != null) {
             Node next = n.next;
+            if (prevMid == null)
+                prevMid = n;
             if (n.data < part) {
-                if (prevMid == null)
-                    prevMid = n;
                 n.next = left.next;
                 left.next = n;
             } else {
@@ -55,5 +55,7 @@ public class Solution04
         return left.next;
     }
 
+    // test cases
+    // only one element
 }
 

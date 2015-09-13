@@ -2,7 +2,7 @@
 *     File Name           :     Solution07.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-13 15:23]
-*     Last Modified       :     [2015-09-13 15:28]
+*     Last Modified       :     [2015-09-13 17:05]
 *     Description         :     Intersection 
 **********************************************************************************/
 
@@ -31,9 +31,15 @@ public class Solution07
         while(ptr != null) {
             if (apperance.containsKey(ptr))
                 return ptr;
+            ptr = ptr.next;
         }
         return null;
     }
+
+    // test cases:
+    // No intersection: [], [2]
+    // 3: [1,2,3,4] , [3,4,5]
+    // 3: [1,2,3,4] , [2,3,4,5]
 }
 
 
