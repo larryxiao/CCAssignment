@@ -2,7 +2,7 @@
 *     File Name           :     Solution08.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-11 22:38]
-*     Last Modified       :     [2015-09-12 10:40]
+*     Last Modified       :     [2015-09-13 11:04]
 *     Description         :     Zero Matrix 
 **********************************************************************************/
 
@@ -11,7 +11,8 @@ import java.util.Arrays;
 
 public class Solution08
 {
-    // Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
+    // Write an algorithm such that if an element in an MxN matrix is 0, its
+    // entire row and column are set to 0.
     public int zeroMatrix(int[][] matrix, int M, int N) {
         // search for zeros and record rows and columns to be zeroed
         ArrayList<Integer> rows = new ArrayList<Integer>();

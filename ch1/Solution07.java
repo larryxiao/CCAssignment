@@ -2,7 +2,7 @@
 *     File Name           :     Solution07.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-11 19:46]
-*     Last Modified       :     [2015-09-11 22:38]
+*     Last Modified       :     [2015-09-13 11:03]
 *     Description         :     Rotate Matrix 
 **********************************************************************************/
 
@@ -32,7 +32,9 @@ public class Solution07
             System.out.println();
         }
     }
-    // Given an image represented by and NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. (clockwise)
+    // Given an image represented by and NxN matrix, where each pixel in the
+    // image is 4 bytes, write a method to rotate the image by 90 degrees.
+    // (clockwise)
     public byte[][][] rotateMatrix(byte[][][] matrix, int N) {
         byte[][][] ret = new byte[N][N][PIXELSIZE];
         for (int x = 0; x < N; x++) {

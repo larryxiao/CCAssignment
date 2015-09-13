@@ -2,7 +2,7 @@
 *     File Name           :     Solution02.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-11 13:08]
-*     Last Modified       :     [2015-09-11 13:22]
+*     Last Modified       :     [2015-09-13 11:03]
 *     Description         :     Check Permutation 
 **********************************************************************************/
 
@@ -11,8 +11,8 @@ import java.util.HashMap;
 
 public class Solution02
 {
-    // given two strings, write a method to decide if one is a permutation of the other
-    // permutation: rearrangement of characters
+    // given two strings, write a method to decide if one is a permutation of
+    // the other permutation: rearrangement of characters
     public boolean checkPermutation(String a, String b) {
         if (a.length() != b.length())
             return false;

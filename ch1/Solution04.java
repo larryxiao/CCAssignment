@@ -2,7 +2,7 @@
 *     File Name           :     Solution04.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-11 13:43]
-*     Last Modified       :     [2015-09-11 19:07]
+*     Last Modified       :     [2015-09-13 11:03]
 *     Description         :     Palindrome Permutation 
 **********************************************************************************/
 
@@ -11,7 +11,8 @@ import java.util.HashMap;
 
 public class Solution04
 {
-    // given a string, write a function to check if it is a permutation of a palindrome
+    // given a string, write a function to check if it is a permutation of a
+    // palindrome
     public boolean palindromePermutation(String input) {
         input = input.toLowerCase();
         Map<Character, Integer> appearance = new HashMap<Character, Integer>();
