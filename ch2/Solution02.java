@@ -16,13 +16,13 @@ public class Solution02
     // Implement an algorithm to find the kth to last element of a singly
     // linked list
     public Node kthToLast(Node head, int k) {
-        if (head == null)
+        if (head == null || k < 1)
             return null;
         Node p1, p2;
         p1 = head;
         p2 = head;
         // advance p2 by k
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i < k-1; i++) {
             p2 = p2.next;
             if (p2 == null)
                 return null;

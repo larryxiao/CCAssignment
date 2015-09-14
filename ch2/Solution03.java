@@ -16,7 +16,7 @@ public class Solution03
     // Implement a algorithm to delete a node in the middle of a singly linked
     // list given only access to that node
     public int deleteMiddleNode(Node d) {
-        if (d == null)
+        if (d == null || d.next == null)
             return -1;
         d.data = d.next.data;
         d.next = d.next.next;

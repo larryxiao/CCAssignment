@@ -8,16 +8,16 @@
 
 public class Solution04
 {
-    public static class Node {
-        Node next = null;
-        int data;
+    public static class ListNode {
+        ListNode next = null;
+        int val;
 
-        public Node() {
-            data = 0;
+        public ListNode() {
+            val = 0;
         }
 
-        public Node(int d) {
-            data = d;
+        public ListNode(int d) {
+            val = d;
         }
     }
 
@@ -25,22 +25,22 @@ public class Solution04
     // nodes less than x come before all nodes greater that or equal to x. If x
     // is contained within the list, the values of x only need to be after the
     // elements less than x.
-    public Node partition(Node head, int part) {
+    public ListNode partition(ListNode head, int part) {
         if (head == null)
             return null;
-        Node mid = new Node(); // anchor node
-        Node left = new Node();
+        ListNode mid = new ListNode(-1); // anchor node
+        ListNode left = new ListNode(-1);
         left.next = mid;
         // save the 1st node left of mid, to help delete mid node
-        Node prevMid = null;
-        Node n = head;
+        ListNode prevMid = null;
+        ListNode n = head;
         // iterate through the list, insert bigger nodes to left, smaller nodes
         // to right
         while(n != null) {
-            Node next = n.next;
-            if (prevMid == null)
-                prevMid = n;
-            if (n.data < part) {
+            ListNode next = n.next;
+            if (n.val < part) {
+                if (prevMid == null)
+                    prevMid = n;
                 n.next = left.next;
                 left.next = n;
             } else {
@@ -49,8 +49,12 @@ public class Solution04
             }
             n = next;
         }
-        // delete mid node
-        prevMid.next = mid.next;
+        // if left don't exist, return mid.next
+        // else delete mid node
+        if (prevMid == null)
+            return mid.next;
+        else
+            prevMid.next = mid.next;
         // return head of list
         return left.next;
     }
@@ -58,4 +62,3 @@ public class Solution04
     // test cases
     // only one element
 }
-

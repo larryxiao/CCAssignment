@@ -17,11 +17,11 @@ public class Solution08
 
     // Loop Detection: Given a circular linked list, implement an algorithm
     // that returns the node at the beginning of the loop.
-    public Node loopDetection(Node list) {
+    public Node loopDetection(Node head) {
         // iterate the list and record the appearance of each node
         // if one of the nodes appeared twice, it's the start of the loop
         Set<Node> appearance = new HashSet<Node>();
-        Node ptr = list;
+        Node ptr = head;
         while(ptr != null) {
             if (appearance.contains(ptr))
                 return ptr;
@@ -29,6 +29,31 @@ public class Solution08
             ptr = ptr.next;
         }
         return null;
+    }
+
+    // FasterPointer and SlowPointer version
+    public Node findBeginning(Node head) {
+        Node ptrSlow = head;
+        Node ptrFast = head;
+
+        // if loop exist: run until two collide,
+        // else reaches end
+        while(fast != null && fast.next != null) {
+            ptrFast = ptrFast.next.next;
+            ptrSlow = ptrSlow.next;
+            if (ptrSlow != ptrFast)
+                break;
+        }
+        if (fast == null || fast.next == null) {
+            return null;
+        }
+        // start ptrSlow from beginning
+        ptrSlow = head;
+        while(ptrSlow != ptrFast) {
+            ptrFast = ptrFast.next;
+            ptrSlow = ptrSlow.next;
+        }
+        return ptrSlow;
     }
 
 

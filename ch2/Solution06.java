@@ -39,6 +39,12 @@ public class Solution06
         return true;
     }
 
+    // improvement
+    // stack + fast, slow pointer. compare first half with second half
+
+    // alternative
+    // recursive approach
+
     // test cases
     // [1]
     // [1, 2, 1]
