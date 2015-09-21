@@ -2,7 +2,7 @@
 *     File Name           :     Solution02.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-18 09:13]
-*     Last Modified       :     [2015-09-18 09:39]
+*     Last Modified       :     [2015-09-19 15:39]
 *     Description         :     Stack Min 
 **********************************************************************************/
 
@@ -83,3 +83,6 @@ public class Solution02
     }
 }
 
+// improvement 1:
+// 0. public class StackWithMin2 extends Stack<lnteger>
+// 1. only store the mins

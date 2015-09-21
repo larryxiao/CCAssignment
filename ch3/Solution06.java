@@ -2,7 +2,7 @@
 *     File Name           :     Solution06.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-19 14:59]
-*     Last Modified       :     [2015-09-19 15:23]
+*     Last Modified       :     [2015-09-21 09:43]
 *     Description         :     Animal Shelter 
 **********************************************************************************/
 
@@ -97,7 +97,17 @@ public class Solution06
         assert foo.dequeueAny() == d3;
     }
 
-    // improvement:
+    // improvement 0:
     // use extra space to record the previous CAT or DOG to avoid search
+    // improvement 1:
+    // An alternative approach that is simple, clean and efficient is to simply
+    // use separate queues for dogs and cats, and to place them within a
+    // wrapper class called Animal- Queue. We then store some sort of timestamp
+    // to mark when each animal was enqueued. When we call dequeueAny, we peek
+    // at the heads of both the dog and cat queue and return the oldest.
+    //
+    // public abstract class Animal
+    // public class Dog extends Animal
+    // public class Cat extends Animal
+    //
 }
-

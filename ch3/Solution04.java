@@ -2,7 +2,7 @@
 *     File Name           :     Solution04.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-18 15:31]
-*     Last Modified       :     [2015-09-18 15:38]
+*     Last Modified       :     [2015-09-21 09:38]
 *     Description         :     Queue via Stack 
 **********************************************************************************/
 
@@ -39,6 +39,8 @@ public class Solution04
         }
     }
 
-    // improvement: use two staks in turn
+    // improvement0: use two staks in turn
+    // improvement1:  a "lazy" approach where we let the elements sit in s2
+    // until we absolutely must reverse the elements.
 }
 

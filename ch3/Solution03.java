@@ -2,7 +2,7 @@
 *     File Name           :     Solution03.java
 *     Created By          :     xiaodi
 *     Creation Date       :     [2015-09-18 09:38]
-*     Last Modified       :     [2015-09-18 09:59]
+*     Last Modified       :     [2015-09-19 15:46]
 *     Description         :     Stack of Plates 
 **********************************************************************************/
 
@@ -24,6 +24,11 @@ public class Solution03
 
         public T push(T item) {
             T ret;
+            if (stacks.size() == 0) {
+                Stack<T> stack = new Stack<T>();
+                stacks.add(stack);
+            }
+
             Stack<T> tailStack = stacks.get(stacks.size()-1);
             ret = tailStack.push(item);
             if (tailStack.size() == threshold) {
@@ -81,6 +86,19 @@ public class Solution03
         assert foo.pop() == 1; // [1]
         assert foo.pop() == null; // []
         assert foo.popAt(3) == null; // []
+
+        foo.push(1);
+        foo.push(1);
+        foo.push(1);
+        foo.push(2);
+        foo.push(2);
+        assert foo.popAt(0) == 1; // [1,1,1; 2,2]
+        assert foo.popAt(0) == 1; // [1,1; 2,2]
+        assert foo.popAt(0) == 1; // [1; 2,2]
+        assert foo.popAt(0) == 2; // [2,2]
     }
 }
 
+// variation 1:
+// rollover the items to make sure previous stacks are full
+//
