@@ -1,0 +1,19 @@
+6.3 Dominos: There is an 8x8 chessboard in which two diagonally opposite corners
+have been cut off. You are given 31 dominos, and a single domino can cover
+exactly two squares. Can you use the 31 dominos to cover the entire board?
+Prove your answer (by providing an example or showing why it's possible)
+
+The basic shapes dominos can form:
+00 001 00 001
+11 221 11 221
+22 33     344
+          355
+
+It's impossible to fill the board. If you place a single domino to the board, it
+covers a black square and a white square, so it needs to have equal number of
+black and white squares to be able to fill the board. 
+However, taking the cornes will take away two same color squares, making it
+impossible to fill.
+
+cf. [Mutilated chessboard problem - Wikipedia, the free encyclopedia]
+(https://en.wikipedia.org/wiki/Mutilated_chessboard_problem)

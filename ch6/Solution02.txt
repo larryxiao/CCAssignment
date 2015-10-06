@@ -1,0 +1,11 @@
+6.2 Basketball: You have a basketball hoop and someone says that you can play one
+of two games.
+Game 1: You get one shot to make the hoop.
+Game 2: You get three shots and you have to make two of three shots.
+If p is the probability of making a particular shot, for which values of p
+should you pick one game or the other?
+
+The probability of winning Game 1: p
+The probability of winning Game 2: C(2,3)*(1-p)*p^2 + p^3
+If p > 1/2 choose Game 2, if p < 1/2 choose Game 1, if p == 1/2 both games have
+same probability of winning.

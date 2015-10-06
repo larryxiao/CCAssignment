@@ -1,0 +1,33 @@
+6.6 Blue-Eyed Island: A bunch of people are living on an island, when a visitor
+comes with a strange order: all blue-eyed people must leave the island as soon
+as possible. There will be a flight out at 8:00 pm every evening. Each person
+can see everyone else's eye color, but they do not know their own (nor is
+anyone allowed to tell them). Additionally, they do not know how many people
+have blue eyes, although they do know that a least one person does. How many
+days will it take the blue-eyed people to leave?
+
+There is a least one blue-eyed person. And only blue-eyed people should leave.
+
+If there's only one blue-eyed person, he/she will discover no other people took
+the plane, so he/she is the only one blue-eyed person, and others will see one
+blue-eyed person, so they will not leave. 
+
+If there're two blue-eyed people, they both see one blue-eyed person, so they
+won't leave on the first night. Then they will see each other the next day, so
+they know they are the two blue-eyed people, and leave. All others will see two
+blue-eyed people, so they will not leave.
+
+If there're three blue-eyed people, they see two other blue-eyed people, so
+they won't leave on the first night. Then in the next day they will see the
+other two blue-eyed people again.  If the other two blue-eyed people leave that
+day, then it means that the observer is not blue-eyed. Otherwise, the observer
+is blue-eyed.  So they will leave the next day.
+
+If there're more blue-eyed people (n >= 3), blue-eyed people see m (m = n-1)
+blue-eyed people, m > 2, non blue-eyed people see n blue-eyed people, n > 3. If
+m = 3, then no observer will leave. On the forth day, the observer discover
+that m blue-eyed people are still there, he/she must be blue-eyed. So he will
+leave the next day.
+
+So for n blue-eyed people, it takes n days to leave. The observe n-1 days, then
+all leave on the nth day.

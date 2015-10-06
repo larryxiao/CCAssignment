@@ -1,0 +1,11 @@
+6.1 The Heavy Pill: You have 20 bottles of pills. 19 bottles have 1.0 gram pills,
+but one has pills of weight 1.1 grams. Given a scale that provides an exact
+measurement, how would you find the heavy bottle?
+
+If 20 bottles are normal, taking 20 pills will weigh 20 gram.
+If take n pills from the nth bottle, the normal total weight will be
+(1+20)*20/2 = 210 g.
+If the nth bottle has pills of weight 1.1g, the resulting total weight will be
+(210 + n*0.1) g
+So given the total weight of pills (by taking n pills from the nth bottle) s, we
+can get n from (s-210)/0.1
